@@ -39,7 +39,7 @@ function App() {
         <div className="big-text">
           <h1>say goodbye to coffee chat jitters.</h1>
         </div>
-        <p>keep your connections warm with <span className='green'>decaf</span>: a next-level networking tracker. think personalized excel + linkedin integrations.</p>
+        <p>keep your connections warm with <span className='green'>decaf</span>: a next-level networking tracker. think personalized crm + linkedin integrations.</p>
         <p>with <span className='green'>decaf</span>...</p>
         <ul>
           <li>plan your outreach efforts to meet your goals</li>
