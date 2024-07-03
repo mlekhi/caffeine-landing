@@ -11,6 +11,13 @@
   text-align: center; 
 }
 
+@media (max-width: 768px) {
+  .App-header {
+    padding-left: 10vw;
+    padding-right: 10vw;  
+  }
+}
+
 .menu {
   height: 30px; /* Adjust height as needed */
   display: flex;
