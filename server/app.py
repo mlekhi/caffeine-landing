@@ -20,6 +20,7 @@ def subscribe():
         if not file_exists:
             writer.writerow(['Email'])
         writer.writerow([email])
+        print([email])
 
     return jsonify({'message': 'Email received'}), 200
 
