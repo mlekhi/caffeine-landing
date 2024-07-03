@@ -39,9 +39,8 @@ function App() {
         <div className="big-text">
           <h1>say goodbye to coffee chat jitters.</h1>
         </div>
-        <div>
-          <p>young professional? serial networker? we've got you covered. </p>
-          <p>keep your connections warm with herbal: a next-level networking tracker. plan your outreach efforts to meet your goals, get insights on your coffee chats, and automate your follow-ups.</p>
+        <div className='green-text'>
+          <p>keep your connections warm with <span className='green'>herbal</span>: a next-level networking tracker. plan your outreach efforts to meet your goals, get insights on your coffee chats, and automate your follow-ups.</p>
         </div>
         <div>
           <form onSubmit={handleSubmit}>
@@ -57,7 +56,7 @@ function App() {
                       required
                       placeholder='&nbsp; email'
                     /> &emsp;
-                    <button type="submit">Submit</button>
+                    <button type="submit">submit</button>
                 </div>
               </>
             )}
