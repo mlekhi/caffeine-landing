@@ -32,18 +32,17 @@
 }
 
 .logo {
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
+  font-size: 12pt
 }
 
 button {
   background-color: #4D8D44;
   color: white;
   font-weight: 600;
-  font-family: "Montserrat", sans-serif;
   border: none;
   transition: transform 0.3s ease;
-  padding: 5px;
+  padding: 10px;
   border-radius: 5pt;
 }
 
@@ -52,7 +51,6 @@ button:hover {
 }
 
 input {
-  font-family: "Montserrat", sans-serif;
   transition: transform 0.3s ease;
   padding: 5px;
   border-radius: 5pt;
@@ -73,6 +71,10 @@ input {
   justify-content: center;
 }
 
+.footer p {
+  font-size: 12pt;
+}
+
 a {
   font-size: 12pt;
   text-decoration: none;
@@ -87,4 +89,8 @@ p {
 
 h1 {
   font-size: 30pt;
+}
+
+.sign-up {
+  display: flex;
 }

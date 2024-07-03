@@ -40,23 +40,25 @@ function App() {
           <h1>say goodbye to coffee chat jitters.</h1>
         </div>
         <div>
-          <p>young professional? serial networker? we have you covered. </p>
-          <p>keep your connections warm by taking your networking tracker to the next level. plan your outreach efforts to meet your goals, automate your follow-ups, and get insights on your coffee chats.</p>
+          <p>young professional? serial networker? we've got you covered. </p>
+          <p>keep your connections warm with herbal: a next-level networking tracker. plan your outreach efforts to meet your goals, get insights on your coffee chats, and automate your follow-ups.</p>
         </div>
         <div>
           <form onSubmit={handleSubmit}>
            {!submitted && (
               <>
                 <p>
-                sign up to be one of the first users here: &emsp;
+                sign up to be one of the first users here: &emsp; </p>
+                <div className='sign-up'>
                   <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  /> &emsp;
-                  <button type="submit">Submit</button>
-                </p>
+                      type="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      required
+                      placeholder='&nbsp; email'
+                    /> &emsp;
+                    <button type="submit">Submit</button>
+                </div>
               </>
             )}
           </form>
