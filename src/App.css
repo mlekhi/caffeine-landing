@@ -103,10 +103,21 @@ h1 {
 }
 
 .green-text {
-  display: inline-flex;
+  display: flex;
 }
 
 .green {
   color: #4D8D44;
   font-weight: 700;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  color: #555555;
+  font-size: 13pt;
+  text-align: left;
 }

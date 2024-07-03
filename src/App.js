@@ -33,15 +33,18 @@ function App() {
     <div className="App">
       <div class='menu'>
         <img src="logo512.png" className='menu-item'></img>
-        <p className='logo'>herbal</p>
+        <p className='logo'>decaf</p>
       </div>
       <header className="App-header">
         <div className="big-text">
-          <h1>say goodbye to coffee chat jitters.</h1>
+          <h1>say goodbye to coffee chat jitters</h1>
         </div>
-        <div className='green-text'>
-          <p>keep your connections warm with <span className='green'>herbal</span>: a next-level networking tracker. plan your outreach efforts to meet your goals, get insights on your coffee chats, and automate your follow-ups.</p>
-        </div>
+        <p>keep your connections warm with <span className='green'>decaf</span>: a next-level networking tracker. think personalized crm + linkedin integrations.</p>
+        <ul>
+          <li>plan your outreach efforts to meet your goals</li>
+          <li>get insights on your coffee chats</li>
+          <li>automate your follow-ups</li>
+        </ul>
         <div>
           <form onSubmit={handleSubmit}>
            {!submitted && (
