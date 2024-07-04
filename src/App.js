@@ -10,7 +10,7 @@ function App() {
     console.log('Email submitted:', email);
     setSubmitted(true);
     try {
-      const response = await fetch('http://143.198.20.136:5001/api/subscribe', {
+      const response = await fetch('https://143.198.20.136:5001/api/subscribe', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
