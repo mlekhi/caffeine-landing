@@ -1,42 +1,31 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './App.css';
+import emailjs from 'emailjs-com'; 
 
 function App() {
+  const form = useRef();
   const [email, setEmail] = useState('');
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log('Email submitted:', email);
-    setSubmitted(true);
+  const handleSubmit = (e) => {
     try {
-      const response = await fetch('https://143.198.20.136:5001/api/subscribe', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ email }),
-      });
-
-      if (response.ok) {
-        console.log('Email submitted:', email);
-        setSubmitted(true);
-      } else {
-        console.error('Failed to submit email');
-      }
+      e.preventDefault();
+      emailjs.sendForm('service_fek8qvj', 'template_2ocwf1o', form.current, 'rISJbZ9LU-DRuPsSp');
+      console.log('Email sent successfully:', email);
+      setSubmitted(true);
     } catch (error) {
-      console.error('Error:', error);
+      console.error('Error sending email:', error);
     }
   };
 
   return (
     <div className="App">
-      <div class='menu'>
+      <div className='menu'>
         <img src="logo512.png" className='menu-item'></img>
         <p className='logo'>decaf</p>
       </div>
       <header className="App-header">
-        <div className="big-text">
+        <div className="big-text"> 
           <h1>say goodbye to coffee chat jitters.</h1>
         </div>
         <p>keep your connections warm with <span className='green'>decaf</span>: a next-level networking tracker. think personalized crm + linkedin integrations.</p>
@@ -47,7 +36,7 @@ function App() {
           <li>automate your follow-ups</li>
         </ul>
         <div>
-          <form onSubmit={handleSubmit}>
+          <form ref={form} onSubmit={handleSubmit}>
            {!submitted && (
               <>
                 <p>
@@ -55,6 +44,7 @@ function App() {
                 <div className='sign-up'>
                   <input
                       type="email"
+                      name="email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       required
@@ -68,7 +58,7 @@ function App() {
           {submitted && <p>Thank you for subscribing!</p>}
         </div>
       </header>
-      <div class='footer'>
+      <div className='footer'>
         <p>made by &nbsp;</p>
         <a href="https://github.com/mlekhi">maya</a>
         <p>&nbsp; with 💚</p>
